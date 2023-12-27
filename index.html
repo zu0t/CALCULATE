@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CALCULATE</title>
-    <!-- Přímý odkaz na Bootstrap CSS (případně lze stáhnout a přidat místně) -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <style>
+<!DOCTYPE html><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<html lang="en"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<head><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <meta charset="UTF-8"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <title>CALCULATE</title><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <!-- Přímý odkaz na Bootstrap CSS (případně lze stáhnout a přidat místně) --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"><!-- if you bypass the paywall then you are black -->
+    <style> 
         body {
-            display: flex;
+            display: flex; 
             justify-content: center;
             align-items: center;
             height: 100vh;
@@ -20,118 +20,128 @@
         .operator-buttons {
             margin-top: 10px;
         }
-    </style>
-</head>
-<body>
-
-<!-- Vítací okno -->
-<div class="modal" tabindex="-1" role="dialog" id="welcomeModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">IMPORTANT</h5>
-            </div>
-            <div class="modal-body">
-                <p>If you bypass the paywall then you are black</p>
-                <button class="btn btn-success" onclick="closeWelcomeModal()">I agree</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="calculator">
-    <h1>CALCULATE</h1>
-    <input type="text" id="display" readonly>
-    <br>
-    <button onclick="appendToDisplay('1')">1</button>
-    <button onclick="appendToDisplay('2')">2</button>
-    <button onclick="appendToDisplay('3')">3</button>
-    <button onclick="showOperatorDialog('*')"> *</button>
-    <br>
-    <button onclick="appendToDisplay('4')">4</button>
-    <button onclick="appendToDisplay('5')">5</button>
-    <button onclick="appendToDisplay('6')">6</button>
-    <button onclick="showOperatorDialog('/')">/</button>
-    <br>
-    <button onclick="appendToDisplay('7')">7</button>
-    <button onclick="appendToDisplay('8')">8</button>
-    <button onclick="appendToDisplay('9')">9</button>
-    <button onclick="appendToDisplay('-')">-</button>
-    <br>
-    <button onclick="appendToDisplay('0')">0</button>
-    <button onclick="clearDisplay()">C</button>
-    <button onclick="calculate()">=</button>
-    <button onclick="appendToDisplay('+')">+</button>
-
-    <!-- Modální okno pro výběr operátoru -->
-    <div class="modal" tabindex="-1" role="dialog" id="operatorModal">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Premium Required</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>For using * and / you have to subscribe to CALCULATE premium, for only $2,99/m</p>
-                    <button class="btn btn-success">Pay with PayPal</button>
-                    <button class="btn btn-danger" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<!-- Přímý odkaz na Bootstrap JS, jQuery a Popper.js -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
-<script>
-    let display = document.getElementById('display');
-    let operatorModal = new bootstrap.Modal(document.getElementById('operatorModal'));
-    let welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
-
-    // Zobrazit vítací okno při načítání stránky
-    window.onload = function () {
-        welcomeModal.show();
-    };
-
-    function appendToDisplay(value) {
-        display.value += value;
-    }
-
-    function clearDisplay() {
-        display.value = '';
-    }
-
-    function calculate() {
-        try {
-            display.value = eval(display.value);
-        } catch (error) {
-            display.value = 'Error';
-        }
-    }
-
-    function showOperatorDialog(operator) {
-        if (operator === '*' || operator === '/') {
-            operatorModal.show();
-        } else {
-            appendToDisplay(operator);
-        }
-    }
-
-    function continueOperation() {
-        appendToDisplay('*');  // Můžete změnit na '/' podle potřeby
-        operatorModal.hide();
-    }
-
-    function closeWelcomeModal() {
-        welcomeModal.hide();
-    }
-</script>
-
-</body>
-</html>
+    </style><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+</head><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<body><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<!-- Vítací okno --><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<div class="modal" tabindex="-1" role="dialog" id="welcomeModal"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <div class="modal-dialog" role="document"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        <div class="modal-content"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+            <div class="modal-header"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                <h5 class="modal-title">IMPORTANT</h5><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+            </div><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+            <div class="modal-body"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                <p>If you bypass the paywall then you are black</p><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                <button class="btn btn-success" onclick="closeWelcomeModal()">I agree</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+            </div><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        </div><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    </div><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+</div><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<div class="calculator"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <h1>CALCULATE</h1><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <input type="text" id="display" readonly><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <br><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('1')">1</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('2')">2</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('3')">3</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="showOperatorDialog('*')"> *</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <br><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('4')">4</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('5')">5</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('6')">6</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="showOperatorDialog('/')">/</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <br><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('7')">7</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('8')">8</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('9')">9</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('-')">-</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <br><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('0')">0</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="clearDisplay()">C</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="calculate()">=</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <button onclick="appendToDisplay('+')">+</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <!-- Modální okno pro výběr operátoru --><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <div class="modal" tabindex="-1" role="dialog" id="operatorModal"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        <div class="modal-dialog" role="document"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+            <div class="modal-content"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                <div class="modal-header"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                    <h5 class="modal-title">Premium Required</h5><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                        <span aria-hidden="true">&times;</span><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                    </button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                </div><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                <div class="modal-body"><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                    <p>For using * and / you have to subscribe to CALCULATE premium, for only<!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ --> $2,99/m</p>
+                    <button class="btn btn-success">Pay with PayPal</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                    <button class="btn btn-danger" data-dismiss="modal">Close</button><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+                </div><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+            </div><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        </div><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    </div><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+</div><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<!-- Přímý odkaz na Bootstrap JS, jQuery a Popper.js <!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script><!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<script> // if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    let display = document.getElementById('display');// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    let operatorModal = new bootstrap.Modal(document.getElementById('operatorModal'));// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    let welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));// if you bypass the paywall then you are black
+// if you bypass the paywall then you are black
+    // Zobrazit vítací okno při načítání stránky// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    window.onload = function () {// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        welcomeModal.show();// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    };// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    function appendToDisplay(value) {// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        display.value += value;// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    }// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    function clearDisplay() {// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        display.value = '';// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    }// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    function calculate() {// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        try {// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+            display.value = eval(display.value);// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        } catch (error) {// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+            display.value = 'Error';// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        }// if you bypass the paywall then you are black
+    }// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    function showOperatorDialog(operator) {// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        if (operator === '*' || operator === '/') {// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+            operatorModal.show();// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        } else {// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+            appendToDisplay(operator);// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        }// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    }// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    function continueOperation() {// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        appendToDisplay('*');  // Můžete změnit na '/' podle potřeby// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        operatorModal.hide();// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    }// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    function closeWelcomeModal() {// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+        welcomeModal.hide();// if you bypass the paywall then you are black
+    }// if you bypass the paywall then you are black<!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+</script><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+<!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <!-- if you bypass the paywall then you are black -->
+    <!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <!-- if you bypass the paywall then you are black -->
+    <!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <!-- if you bypass the paywall then you are black --><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+    <!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+</body><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
+</html><!-- i⁥f⁥ ⁥y⁥o⁥u⁥ ⁥b⁥y⁥p⁥a⁥s⁥s⁥ ⁥t⁥h⁥e⁥ ⁥p⁥a⁥y⁥w⁥a⁥l⁥l⁥ ⁥t⁥h⁥e⁥n⁥ ⁥y⁥o⁥u⁥ ⁥a⁥r⁥e⁥ ⁥b⁥l⁥a⁥c⁥k⁥ -->
