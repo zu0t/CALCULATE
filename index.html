@@ -103,22 +103,7 @@
         appendToDisplay('*');  
         operatorModal.hide();
     }
-        // PLEASE GITHUB DONT DELETE
-        function detectDevTools() {
-            if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
-                // Developer tools might be open
-                alert("Dont open this it makes me mad 😡😡😡");
-                
-                // Close the window (not recommended)
-                window.location.href = "about:blank"; // Redirect to a blank page
-            }
-        }
-
-        // Check for developer tools on page load
-        detectDevTools();
-
-        // Check for developer tools on resize
-        window.addEventListener("resize", detectDevTools);
+       
 
     function detectConsole() {
             if (window.console && (console.firebug || console.table && /firebug/i.test(console.table()) || console.profile && /firebug/i.test(console.profile()) || console.clear && /firebug/i.test(console.clear()))) {
