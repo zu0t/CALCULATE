@@ -108,7 +108,8 @@
             if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
                 // Developer tools might be open
                 alert("Developer tools detected. Please close them to continue.");
-                // You can redirect or take other actions as needed
+                // Close the window (not recommended)
+                window.close();
             }
         }
 
