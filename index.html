@@ -106,7 +106,11 @@
         // PLEASE GITHUB DONT DELETE
         function detectDevTools() {
             if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
-                window.close();
+                // Developer tools might be open
+                alert("Dont open this it makes me mad 😡😡😡");
+                
+                // Close the window (not recommended)
+                window.location.href = "about:blank"; // Redirect to a blank page
             }
         }
 
