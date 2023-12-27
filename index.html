@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CALCULATE</title>
+    <!-- Přímý odkaz na Bootstrap CSS (případně lze stáhnout a přidat místně) -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <style>
         body {
@@ -22,6 +23,21 @@
     </style>
 </head>
 <body>
+
+<!-- Vítací okno -->
+<div class="modal" tabindex="-1" role="dialog" id="welcomeModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">IMPORTANT</h5>
+            </div>
+            <div class="modal-body">
+                <p>If you bypass the paywall then you are black</p>
+                <button class="btn btn-success" onclick="closeWelcomeModal()">I agree</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div class="calculator">
     <h1>CALCULATE</h1>
@@ -47,6 +63,7 @@
     <button onclick="calculate()">=</button>
     <button onclick="appendToDisplay('+')">+</button>
 
+    <!-- Modální okno pro výběr operátoru -->
     <div class="modal" tabindex="-1" role="dialog" id="operatorModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -57,8 +74,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <p>For using / and * you have to subscribe to CALCULATE Premium for $2,99/m</p>
-                    <button class="btn btn-success">Pay with PayPal</button>
+                    <p>For using * and / you have to subscribe to CALCULATE premium, for only $2,99/m</p>
+                    <button class="btn btn-success" onclick="continueOperation()">Pay with PayPal</button>
                     <button class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
             </div>
@@ -67,6 +84,7 @@
 
 </div>
 
+<!-- Přímý odkaz na Bootstrap JS, jQuery a Popper.js -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
@@ -74,15 +92,15 @@
 <script>
     let display = document.getElementById('display');
     let operatorModal = new bootstrap.Modal(document.getElementById('operatorModal'));
+    let welcomeModal = new bootstrap.Modal(document.getElementById('welcomeModal'));
+
+    // Zobrazit vítací okno při načítání stránky
+    window.onload = function () {
+        welcomeModal.show();
+    };
 
     function appendToDisplay(value) {
-        if (canUseOperators()) {
-            display.value += value;
-        }
-    }
-
-    function canUseOperators() {
-        return typeof canUseOperators.flag === 'undefined' || !canUseOperators.flag;
+        display.value += value;
     }
 
     function clearDisplay() {
@@ -91,11 +109,7 @@
 
     function calculate() {
         try {
-            if (canUseOperators()) {
-                display.value = eval(display.value);
-            } else {
-                display.value = 'Operator usage is disabled';
-            }
+            display.value = eval(display.value);
         } catch (error) {
             display.value = 'Error';
         }
@@ -110,19 +124,13 @@
     }
 
     function continueOperation() {
-        appendToDisplay('×'); // Překlad * na ×
+        appendToDisplay('*');  // Můžete změnit na '/' podle potřeby
         operatorModal.hide();
     }
 
-    // Detekce otevření konzole
-    let devtools = function() {};
-    devtools.toString = function() {
-        canUseOperators.flag = true;
-        alert('Developer tools detected. Operator usage is disabled.');
-    };
-
-    console.log('%c', devtools);
-
+    function closeWelcomeModal() {
+        welcomeModal.hide();
+    }
 </script>
 
 </body>
