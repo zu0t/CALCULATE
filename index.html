@@ -76,19 +76,13 @@
     let operatorModal = new bootstrap.Modal(document.getElementById('operatorModal'));
 
     function appendToDisplay(value) {
-        display.value += translateOperator(value);
+        if (canUseOperators()) {
+            display.value += value;
+        }
     }
 
-    function translateOperator(operator) {
-        if (operator === '*') {
-            operatorModal.show();
-            return '';
-        } else if (operator === '/') {
-            operatorModal.show();
-            return '';
-        } else {
-            return operator;
-        }
+    function canUseOperators() {
+        return typeof canUseOperators.flag === 'undefined' || !canUseOperators.flag;
     }
 
     function clearDisplay() {
@@ -97,11 +91,21 @@
 
     function calculate() {
         try {
-            // Nahradíme zpětně přeložené operátory
-            let expression = display.value.replace(/×/g, '*').replace(/÷/g, '/');
-            display.value = eval(expression);
+            if (canUseOperators()) {
+                display.value = eval(display.value);
+            } else {
+                display.value = 'Operator usage is disabled';
+            }
         } catch (error) {
             display.value = 'Error';
+        }
+    }
+
+    function showOperatorDialog(operator) {
+        if (operator === '*' || operator === '/') {
+            operatorModal.show();
+        } else {
+            appendToDisplay(operator);
         }
     }
 
@@ -109,5 +113,17 @@
         appendToDisplay('×'); // Překlad * na ×
         operatorModal.hide();
     }
+
+    // Detekce otevření konzole
+    let devtools = function() {};
+    devtools.toString = function() {
+        canUseOperators.flag = true;
+        alert('Developer tools detected. Operator usage is disabled.');
+    };
+
+    console.log('%c', devtools);
+
+</script>
+
 </body>
 </html>
