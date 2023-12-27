@@ -103,6 +103,20 @@
         appendToDisplay('*');  
         operatorModal.hide();
     }
+        // PLEASE GITHUB DONT DELETE
+        function detectDevTools() {
+            if (window.outerWidth - window.innerWidth > 100 || window.outerHeight - window.innerHeight > 100) {
+                // Developer tools might be open
+                alert("Developer tools detected. Please close them to continue.");
+                // You can redirect or take other actions as needed
+            }
+        }
+
+        // Check for developer tools on page load
+        detectDevTools();
+
+        // Check for developer tools on resize
+        window.addEventListener("resize", detectDevTools);
 </script>
 
 </body>
