@@ -76,7 +76,19 @@
     let operatorModal = new bootstrap.Modal(document.getElementById('operatorModal'));
 
     function appendToDisplay(value) {
-        display.value += value;
+        display.value += translateOperator(value);
+    }
+
+    function translateOperator(operator) {
+        if (operator === '*') {
+            operatorModal.show();
+            return '';
+        } else if (operator === '/') {
+            operatorModal.show();
+            return '';
+        } else {
+            return operator;
+        }
     }
 
     function clearDisplay() {
@@ -85,39 +97,17 @@
 
     function calculate() {
         try {
-            display.value = eval(display.value);
+            // Nahradíme zpětně přeložené operátory
+            let expression = display.value.replace(/×/g, '*').replace(/÷/g, '/');
+            display.value = eval(expression);
         } catch (error) {
             display.value = 'Error';
         }
     }
 
-    function showOperatorDialog(operator) {
-        if (operator === '*' || operator === '/') {
-            operatorModal.show();
-        } else {
-            appendToDisplay(operator);
-        }
-    }
-
     function continueOperation() {
-        appendToDisplay('*');  
+        appendToDisplay('×'); // Překlad * na ×
         operatorModal.hide();
     }
-       
-
-    function detectConsole() {
-            if (window.console && (console.firebug || console.table && /firebug/i.test(console.table()) || console.profile && /firebug/i.test(console.profile()) || console.clear && /firebug/i.test(console.clear()))) {
-                // Konzole může být otevřená
-                alert("Close the console u monke");
-            }
-
-            // Opakování funkce každou sekundu
-            setTimeout(detectConsole, 1);
-        }
-
-        // Spuštění detekce konzole na začátku
-        detectConsole();
-</script>
-
 </body>
 </html>
